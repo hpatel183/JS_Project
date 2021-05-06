@@ -10,31 +10,31 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
-
 @Entity
-@Table(name="ERS_Users", uniqueConstraints = @UniqueConstraint(name="ers_users_UNv1", columnNames={"ers_userName", "userEmail"}))
+@Table(name = "ERS_Users", uniqueConstraints = @UniqueConstraint(name = "ers_users_UNv1", columnNames = {
+		"ers_userName", "userEmail" }))
 public class ERS_Users {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ers_users_id")
-	private int ers_users_id ;
-	
-	@Column(name="ers_userName", length = 50)
+	private int ers_users_id;
+
+	@Column(name = "ers_userName", length = 50)
 	private String ers_userName;
-	
-	@Column(name="ers_password", length = 50)
+
+	@Column(name = "ers_password", length = 50)
 	private String ers_password;
-	
-	@Column(name="userFirstName", length = 100)
-	private String userFirstName;
-	
-	@Column(name="userLastName", length = 100)
-	private String userLastName;
-	
-	@Column(name="userEmail", length = 150)
+
+	@Column(name = "userEmail", length = 150)
 	private String userEmail;
-	
+
+	@Column(name = "userFirstName", length = 100)
+	private String userFirstName;
+
+	@Column(name = "userLastName", length = 100)
+	private String userLastName;
+
 	@ManyToOne
 	@JoinColumn(name = "user_role_id")
 	private ERS_User_Roles user_roleId;
@@ -43,14 +43,14 @@ public class ERS_Users {
 		super();
 	}
 
-	public ERS_Users(String ers_userName, String ers_password, String userFirstName, String userLastName,
-			String userEmail, ERS_User_Roles user_roleId) {
+	public ERS_Users(String ers_userName, String ers_password, String userEmail, String userFirstName,
+			String userLastName, ERS_User_Roles user_roleId) {
 		super();
 		this.ers_userName = ers_userName;
 		this.ers_password = ers_password;
+		this.userEmail = userEmail;
 		this.userFirstName = userFirstName;
 		this.userLastName = userLastName;
-		this.userEmail = userEmail;
 		this.user_roleId = user_roleId;
 	}
 
@@ -173,10 +173,6 @@ public class ERS_Users {
 		return "ERS_Users [ers_users_id=" + ers_users_id + ", ers_userName=" + ers_userName + ", ers_password="
 				+ ers_password + ", userFirstName=" + userFirstName + ", userLastName=" + userLastName + ", userEmail="
 				+ userEmail + ", user_roleId=" + user_roleId + "]";
-	} 	
-	
-	
-	
-	
-	
+	}
+
 }

@@ -40,7 +40,7 @@ public class ERS_UserService {
 		return user;
 	}
 
-	public ERS_Users addUser(ERS_UsersDTO userDTO) throws BadParameterException, SecurityException, RollbackException, HeuristicMixedException, HeuristicRollbackException, SystemException {
+	public ERS_Users addUser(ERS_UsersDTO userDTO) throws BadParameterException, SecurityException, RollbackException, HeuristicMixedException, HeuristicRollbackException, SystemException, LoginException {
 		if(userDTO.getErs_userName().trim().equals("") || userDTO.getErs_password().trim().equals("") ||
 				userDTO.getUserEmail().trim().equals("") || userDTO.getUserFirstName().trim().equals("")||
 				userDTO.getUserLastName().trim().equals("") || userDTO.getUserRole().trim().equals("")) {
@@ -50,7 +50,7 @@ public class ERS_UserService {
 		return users;
 	}
 
-	public ArrayList<ERS_Users> getAllusers() {
+	public ArrayList<ERS_Users> getAllusers() throws LoginException {
 		
 		ArrayList<ERS_Users> users = userDAO.getAllUsers();
 		

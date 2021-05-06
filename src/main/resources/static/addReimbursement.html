@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Add Reimbursement</title>
+</head>
+
+<body style="width: 95%;">
+    <header style="margin: 0;">
+        <img src="image/logo.png" alt="Company Logo">
+        <h1>Add Reimbursement</h1>
+    </header>
+    <nav id="nav_menu">
+        <ul>
+            <li><a href="landing.html">Home</a></li>
+            <li><a href="reimbursement.html">Reimbursements</a></li>
+            <li><a href="addReimbursement.html" class="current">Add Reimbursement</a></li>
+            <li class="lastitem"><a href="logout.html">Log Out</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2 style="padding-left: 100px;">Add Reimbursement</h2>
+        <div style="padding-left: 100px;">
+            <label for="reimb_amount">Reimbursement Amount:</label>
+            <input type="number" name="reimb_amount" id="reimb_amount">
+
+            <label for="reimb_description">Reimbursement Description:</label>
+            <input type="text" name="reimb_description" id="reimb_description">
+
+            <label for="reimb_receipt">Reimbursement Receipt: </label>
+            <input type="file" name="reimb_receipt" id="reimb_receipt">
+
+            <label for="reimType">Reimbursement Type: </label>
+            <select id="reimType" name="reimType">
+                <option selected>Select Type</option>
+                <option id="lodging">Lodging</option>
+                <option id="travel">Travel</option>
+                <option id="food">Food</option>
+                <option id="other">Other</option>
+            </select>
+
+            <button id="addReim">Add Reimbursement</button>
+        </div>
+    </section>
+    <footer>
+        <p id="user"></p>
+    </footer>
+</body>
+
+<script src="js/addReimbursement.js"></script>
+
+</html>

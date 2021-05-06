@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="image/logo.ico">
+    <title>Expense Reimbursement System</title>
+</head>
+
+<body>
+    <header style="margin: 0;">
+        <img src="image/logo.png" alt="Company Logo">
+        <h1>Expense Reimbursement System</h1>
+    </header>
+    <aside>
+        <h2>Sign Up</h2>
+        <div id="form">
+
+            <label for="ers_userName">Username:</label>
+            <input type="text" name="ers_userName" id="ers_userName">
+
+            <label for="ers_password">Password:</label>
+            <input type="password" name="ers_password" id="ers_password">
+
+            <label for="userEmail">Email: </label>
+            <input type="email" name="userEmail" id="userEmail">
+
+            <label for="userFirstName">First Name: </label>
+            <input type="text" name="userFirstName" id="userFirstName">
+
+            <label for="userLastName">Last Name: </label>
+            <input type="text" name="userLastName" id="userLastName">
+
+            <label for="userRole">Role: </label>
+            <select id="userRole" name="userRole">
+                <option selected>Select Role</option>
+                <option id="employee">Employee</option>
+                <option id="fmanager">F Manager</option>
+            </select>
+
+            <button id="login">Sign Up</button>
+
+        </div>
+    </aside>
+    <section>
+        <h1><a href="index.html">Log In</h1>
+    </section>
+    <footer>
+        
+    </footer>
+</body>
+<script src="js/addUser.js"></script>
+
+</html>

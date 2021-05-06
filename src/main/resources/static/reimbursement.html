@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Reimbursement</title>
+</head>
+
+<body style="width: 95%;">
+    <header style="margin: 0;">
+        <img src="image/logo.png" alt="Company Logo">
+        <h1>Display Reimbursement</h1>
+    </header>
+    <nav id="nav_menu">
+        <ul>
+            <li><a href="landing.html">Home</a></li>
+            <li><a href="reimbursement.html" class="current">Reimbursements</a></li>
+            <li><a href="addReimbursement.html">Add Reimbursement</a></li>
+            <li class="lastitem"><a href="logout.html">Log Out</a></li>
+        </ul>
+    </nav>
+
+    <div>
+        <label for="filterByStatus">Filter By Status:</label>
+        <select id="filterByStatus">
+            <option id="allReim" selected>All</option>
+            <option id="pendingReim">Pending</option>
+            <option id="approvedReim">Approved</option>
+            <option id="deniedReim">Denied</option>
+        </select>
+    </div>
+
+
+    <section>
+        <table id="table">
+            <thead id="head">
+                <tr id="row">
+                    <th>ID</th>
+                    <th>Amount</th>
+                    <th>Submitted</th>
+                    <th>Resolved</th>
+                    <th>Description</th>
+                    <th>Receipt</th>
+                    <th>Author</th>
+                    <th>Resolver</th>
+                    <th>Status</th>
+                    <th>Type</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+
+
+    </section>
+    <footer>
+        <p id="user"></p>
+    </footer>
+</body>
+<script src="js/reimbursement.js"></script>
+
+</html>

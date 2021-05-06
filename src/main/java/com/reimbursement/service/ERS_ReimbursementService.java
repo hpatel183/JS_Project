@@ -1,8 +1,10 @@
 package com.reimbursement.service;
 
+import java.io.InputStream;
 import java.util.List;
 
 import com.reimbursement.dao.ERS_ReimbursementDAO;
+import com.reimbursement.dto.CleanReimbursement;
 import com.reimbursement.dto.ERS_ReimbursementDTO;
 import com.reimbursement.exception.AuthenticationException;
 import com.reimbursement.exception.BadParameterException;
@@ -15,6 +17,7 @@ import com.reimbursement.models.ERS_Users;
 public class ERS_ReimbursementService {
 
 	private ERS_ReimbursementDAO reimbersementDAO;
+	private CleanReimbursement cleanDAO;
 
 	public ERS_ReimbursementService() {
 		this.reimbersementDAO = new ERS_ReimbursementDAO();
@@ -24,27 +27,21 @@ public class ERS_ReimbursementService {
 		this.reimbersementDAO = reimbersementDAO;
 	}
 
-	public List<ERS_Reimbersement> getAllreimbursement(ERS_Users user) throws LoginException {
+	public List<CleanReimbursement> getAllreimbursement(ERS_Users user) throws LoginException {
 
 		if (user == null) {
-			throw new LoginException("User NOT FOUND");
+			throw new LoginException("User Not Logged In");
 		}
 
 		System.out.println("Go to DAO");
-		List<ERS_Reimbersement> reimbersement = reimbersementDAO.getAllreimbursement(user);
+		List<CleanReimbursement> reimbersement = reimbersementDAO.getAllreimbursement(user);
+		
 		return reimbersement;
 	}
 
 	public ERS_Reimbersement addreimbursement(ERS_Users user, ERS_ReimbursementDTO reimbursementDTO)
 			throws BadParameterException, LoginException {
-		/*
-		 * if(reimbursementDTO.getReimb_description().trim().equals("") ||
-		 * reimbursementDTO.getReimb_submitted() == null ||
-		 * reimbursementDTO.getReimb_author() == null ||
-		 * reimbursementDTO.getReimb_status_id() == null ||
-		 * reimbursementDTO.getReimb_type_id() == null) { throw new
-		 * BadParameterException("None of the fields should be Blank/NULL"); }
-		 */
+
 		if (user == null) {
 			throw new LoginException("User NOT Logged In");
 		}
