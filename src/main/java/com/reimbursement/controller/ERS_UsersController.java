@@ -23,10 +23,15 @@ public class ERS_UsersController implements Controller {
 
 		System.out.println("Go to service");
 		ERS_Users user = userService.login(userDTO);
-
+		
+		
 		ctx.sessionAttribute("currentlyLoggedInUser", user);
 		ctx.json(user);
 		ctx.status(200);
+		ctx.result("validUser");
+
+		//ctx.res.sendRedirect("http://localhost:7000/landing.html");
+		//ctx.redirect("/landing.html", 200);
 	};
 
 	private Handler currentUserHandler = (ctx) -> {
@@ -41,7 +46,7 @@ public class ERS_UsersController implements Controller {
 			ctx.status(400);
 		} else {
 			System.out.println(user);
-			ctx.status(201);
+			ctx.status(200);
 			ctx.json(user);
 		}
 	};
@@ -60,8 +65,9 @@ public class ERS_UsersController implements Controller {
 		System.out.println("Go to add service");
 		ERS_Users user = userService.addUser(userDTO);
 
-		ctx.status(201);
+		ctx.status(200);
 		ctx.json(user);
+		
 		System.out.println("Add user complete.");
 	};
 
@@ -86,6 +92,7 @@ public class ERS_UsersController implements Controller {
 
 		ArrayList<ERS_Users> users = userService.getAllusers();
 
+		//ctx.cookie(user.getUser_roleId());
 		ctx.status(200);
 		ctx.json(users);
 		System.out.println("All user display.");

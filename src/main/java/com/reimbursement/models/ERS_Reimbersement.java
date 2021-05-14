@@ -69,12 +69,28 @@ public class ERS_Reimbersement {
 	 * reimb_description; this.reimb_author = reimb_author; this.reimb_resolver =
 	 * reimb_resolver; this.reimb_status_id = reimb_status_id; this.reimb_type_id =
 	 * reimb_type_id; }
-	 */
+	 */	
 
 	public ERS_Reimbersement(int reimb_amount, Timestamp reimb_submitted, Timestamp reimb_resolved,
 			String reimb_description, byte[] reimb_receipt, ERS_Users reimb_author, ERS_Users reimb_resolver,
 			ERS_Reimbursement_Status reimb_status_id, ERS_Reimbursement_Type reimb_type_id) {
 		super();
+		this.reimb_amount = reimb_amount;
+		this.reimb_submitted = reimb_submitted;
+		this.reimb_resolved = reimb_resolved;
+		this.reimb_description = reimb_description;
+		this.reimb_receipt = reimb_receipt;
+		this.reimb_author = reimb_author;
+		this.reimb_resolver = reimb_resolver;
+		this.reimb_status_id = reimb_status_id;
+		this.reimb_type_id = reimb_type_id;
+	}
+
+	public ERS_Reimbersement(int reimb_id, int reimb_amount, Timestamp reimb_submitted, Timestamp reimb_resolved,
+			String reimb_description, byte[] reimb_receipt, ERS_Users reimb_author, ERS_Users reimb_resolver,
+			ERS_Reimbursement_Status reimb_status_id, ERS_Reimbursement_Type reimb_type_id) {
+		super();
+		this.reimb_id = reimb_id;
 		this.reimb_amount = reimb_amount;
 		this.reimb_submitted = reimb_submitted;
 		this.reimb_resolved = reimb_resolved;

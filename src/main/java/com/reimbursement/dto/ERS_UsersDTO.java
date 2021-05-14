@@ -1,7 +1,5 @@
 package com.reimbursement.dto;
 
-import com.reimbursement.models.ERS_User_Roles;
-
 public class ERS_UsersDTO {
 	
 	private String ers_userName;
@@ -80,5 +78,69 @@ public class ERS_UsersDTO {
 	public void setUserRole(String userRole) {
 		this.userRole = userRole;
 	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((ers_password == null) ? 0 : ers_password.hashCode());
+		result = prime * result + ((ers_userName == null) ? 0 : ers_userName.hashCode());
+		result = prime * result + ((userEmail == null) ? 0 : userEmail.hashCode());
+		result = prime * result + ((userFirstName == null) ? 0 : userFirstName.hashCode());
+		result = prime * result + ((userLastName == null) ? 0 : userLastName.hashCode());
+		result = prime * result + ((userRole == null) ? 0 : userRole.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		ERS_UsersDTO other = (ERS_UsersDTO) obj;
+		if (ers_password == null) {
+			if (other.ers_password != null)
+				return false;
+		} else if (!ers_password.equals(other.ers_password))
+			return false;
+		if (ers_userName == null) {
+			if (other.ers_userName != null)
+				return false;
+		} else if (!ers_userName.equals(other.ers_userName))
+			return false;
+		if (userEmail == null) {
+			if (other.userEmail != null)
+				return false;
+		} else if (!userEmail.equals(other.userEmail))
+			return false;
+		if (userFirstName == null) {
+			if (other.userFirstName != null)
+				return false;
+		} else if (!userFirstName.equals(other.userFirstName))
+			return false;
+		if (userLastName == null) {
+			if (other.userLastName != null)
+				return false;
+		} else if (!userLastName.equals(other.userLastName))
+			return false;
+		if (userRole == null) {
+			if (other.userRole != null)
+				return false;
+		} else if (!userRole.equals(other.userRole))
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "ERS_UsersDTO [ers_userName=" + ers_userName + ", ers_password=" + ers_password + ", userEmail="
+				+ userEmail + ", userFirstName=" + userFirstName + ", userLastName=" + userLastName + ", userRole="
+				+ userRole + "]";
+	}
+	
+	
 
 }
