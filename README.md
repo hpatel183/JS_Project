@@ -9,3 +9,6 @@ The Expense Reimbursement System (ERS) will manage the process of reimbursing em
 
 # Logical Model
 ![image](https://user-images.githubusercontent.com/81982494/118419409-839be300-b681-11eb-8758-b8d7b9eb3d95.png)
+
+# Physical Model
+![image](https://user-images.githubusercontent.com/81982494/118420035-5c461580-b683-11eb-8f52-6276a1c2f6f1.png)
