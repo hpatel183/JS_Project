@@ -6,3 +6,5 @@ The Expense Reimbursement System (ERS) will manage the process of reimbursing em
 - **Middle-tier:** Javalin
 - **Front-end:** JavaScript, HTML, CSS, AJAX
 - **Testing:** Mockito, JUnit 4
+
+![image](https://user-images.githubusercontent.com/81982494/118419365-5fd89d00-b681-11eb-8f82-0367a7a39467.png)
