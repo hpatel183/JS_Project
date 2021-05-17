@@ -7,4 +7,5 @@ The Expense Reimbursement System (ERS) will manage the process of reimbursing em
 - **Front-end:** JavaScript, HTML, CSS, AJAX
 - **Testing:** Mockito, JUnit 4
 
-![image](https://user-images.githubusercontent.com/81982494/118419365-5fd89d00-b681-11eb-8f82-0367a7a39467.png)
+# Logical Model
+![image](https://user-images.githubusercontent.com/81982494/118419409-839be300-b681-11eb-8758-b8d7b9eb3d95.png)
